@@ -1,0 +1,446 @@
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.navbarContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.logoAndLocation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.locationDropdownWrapper {
+  margin-left: 1rem;
+}
+
+.locationDropdown {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.locationIcon {
+  color: #e93b52;
+  margin-right: 0.5rem;
+}
+
+.locationSelect {
+  appearance: none;
+  background: transparent;
+  border: none;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  padding-right: 1.5rem;
+}
+
+.dropdownArrow {
+  color: #777;
+  pointer-events: none;
+  margin-left: 0.25rem;
+  transition: transform 0.3s ease;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  width: 100%;
+  position: relative;
+}
+
+.searchInputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 2.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  background-color: #f5f5f5;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+/* Mobile Search Styles */
+.mobileSearch {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+.mobileSearch.visible {
+  transform: translateY(0);
+}
+
+.mobileSearchForm {
+  margin-bottom: 0.5rem;
+}
+
+.mobileSearchInput {
+  width: 100%;
+  padding: 0.75rem 2.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  background-color: #f5f5f5;
+}
+
+.mobileSearchIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+.discountBanner {
+  background: #145843;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #ffa500;
+}
+
+.mobileMenuButton {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  padding: 0.5rem;
+}
+
+.mobileMenuButton.active {
+  color: #e93b52;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.navLink:hover {
+  color: #e93b52;
+  background-color: rgba(233, 59, 82, 0.1);
+}
+
+.cartWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.cartCount {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #e93b52;
+  color: white;
+  font-size: 0.75rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile Navigation Links */
+.mobileNavLinks {
+  display: none;
+  background-color: white;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  max-height: 0;
+}
+
+.mobileNavLinks.open {
+  display: block;
+  max-height: 1000px;
+  border-top: 1px solid #eee;
+}
+
+/* Dropdown Styles */
+.radiologyDropdown,
+.centersDropdown {
+  width: 100%;
+  position: relative;
+}
+
+.radiologyButton,
+.centersButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.radiologyButton.active,
+.centersButton.active {
+  color: #e93b52;
+  background-color: rgba(233, 59, 82, 0.1);
+}
+
+.dropdownArrow.rotated {
+  transform: rotate(180deg);
+}
+
+.dropdownContent {
+  background-color: #f8f9fa;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+}
+
+.dropdownContent.visible {
+  max-height: 500px;
+  transition: max-height 0.3s ease-in;
+}
+
+.dropdownItem {
+  display: block;
+  padding: 0.75rem 2rem;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.dropdownItem:hover {
+  color: #e93b52;
+  background-color: rgba(233, 59, 82, 0.1);
+  border-left-color: #e93b52;
+}
+
+/* Desktop Styles */
+.desktopNavLinks {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    height: auto;
+    min-height: auto;
+  }
+
+  .navbarContent {
+    flex-wrap: nowrap;
+    padding: 0.5rem 2rem;
+  }
+
+  .logoAndLocation {
+    width: auto;
+  }
+
+  .logo img {
+    max-width: 100px;
+  }
+
+  .mobileMenuButton {
+    display: none;
+  }
+
+  .searchForm {
+    width: auto;
+    margin: 0 1rem;
+    flex-grow: 1;
+    max-width: 400px;
+  }
+
+  .mobileSearch {
+    display: none !important;
+  }
+
+  .desktopNavLinks {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .mobileNavLinks {
+    display: none !important;
+  }
+
+  .navLink {
+    width: auto;
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* Desktop Dropdown Styles */
+  .radiologyDropdown,
+  .centersDropdown {
+    position: relative;
+    width: auto;
+  }
+
+  .radiologyButton,
+  .centersButton {
+    padding: 0.5rem 0.75rem;
+    width: auto;
+  }
+
+  .dropdownContent {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 220px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    max-height: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  .dropdownContent.visible {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .dropdownItem {
+    padding: 0.75rem 1rem;
+    border-left: none;
+  }
+
+  .dropdownItem:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  .dropdownItem:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+
+/* Specific Mobile Improvements */
+@media (max-width: 767px) {
+  .navbar {
+    position: relative;
+  }
+
+  .logoAndLocation {
+    padding: 0.5rem 0;
+  }
+
+  .searchForm {
+    order: 2;
+    margin: 0.5rem 0;
+  }
+
+  .mobileNavLinks {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdownContent {
+    background-color: #f5f5f5;
+  }
+
+  .dropdownItem {
+    padding-left: 3rem;
+  }
+
+  .radiologyButton,
+  .centersButton {
+    justify-content: flex-start;
+  }
+
+  .dropdownArrow {
+    position: absolute;
+    right: 1rem;
+  }
+
+  .navLink {
+    border-bottom: 1px solid #eee;
+  }
+
+  .navLink:last-child {
+    border-bottom: none;
+  }
+
+  /* Better touch targets for mobile */
+  .radiologyButton,
+  .centersButton,
+  .navLink,
+  .dropdownItem {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Show mobile search */
+  .mobileSearch {
+    display: block;
+  }
+}

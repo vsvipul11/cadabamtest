@@ -1,0 +1,188 @@
+.pageContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .content {
+    margin-top: 2rem;
+  }
+  
+  .section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .sectionContent {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .sectionText {
+    flex: 1;
+  }
+  
+  .sectionImage {
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .sectionTitle {
+    color: #2a3990;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e93b52;
+    padding-bottom: 0.5rem;
+  }
+  
+  .sectionText p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .descriptionTitle,
+  .risksLimitationsTitle,
+  .parameterTitle,
+  .whoNeedTestTitle,
+  .benefitTitle,
+  .diseasesDiagnosedTitle,
+  .preparationTitle,
+  .interpretationTitle {
+    color: #2a3990;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tableWrapper {
+    overflow-x: auto;
+  }
+  
+  .interpretationTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1rem;
+  }
+  
+  .interpretationTable th,
+  .interpretationTable td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .interpretationTable th {
+    background-color: #2a3990;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  .interpretationTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .interpretationTable tr:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .faqItem {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .faqQuestion {
+    color: #2a3990;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .faqAnswer {
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .pageContainer {
+      padding: 1rem;
+    }
+  
+    .section {
+      padding: 1.5rem;
+    }
+  
+    .sectionContent {
+      flex-direction: column;
+    }
+  
+    .sectionImage {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    .sectionTitle {
+      font-size: 20px;
+    }
+  
+    .descriptionTitle,
+    .risksLimitationsTitle,
+    .parameterTitle,
+    .whoNeedTestTitle,
+    .benefitTitle,
+    .diseasesDiagnosedTitle,
+    .preparationTitle,
+    .interpretationTitle,
+    .faqQuestion {
+      font-size: 18px;
+    }
+  }
+  
+  /* Additional styles for better readability and spacing */
+  .section > *:last-child {
+    margin-bottom: 0;
+  }
+  
+  .faqItem:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Hover effect for interactive elements */
+  .faqItem:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  /* Style for lists within section text */
+  .sectionText ul,
+  .sectionText ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .sectionText li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Add some styling for blockquotes if needed */
+  .sectionText blockquote {
+    border-left: 4px solid #e93b52;
+    padding-left: 1rem;
+    margin-left: 0;
+    font-style: italic;
+    color: #555;
+  }

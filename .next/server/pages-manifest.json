@@ -1,0 +1,10 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/bangalore/[[...params]]": "pages/bangalore/[[...params]].js",
+  "/bangalore/[category]/[test]": "pages/bangalore/[category]/[test].js",
+  "/bangalore/[category]": "pages/bangalore/[category].js",
+  "/aboutus": "pages/aboutus.js",
+  "/bangalore/lab-test": "pages/bangalore/lab-test.js"
+}

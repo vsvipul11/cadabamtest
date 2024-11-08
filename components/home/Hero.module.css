@@ -1,0 +1,406 @@
+.hero {
+  padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textContent {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #e93b52;
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background-color: rgba(233, 59, 82, 0.2);
+  z-index: -1;
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #0047ab;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.searchContainer {
+  position: relative;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  padding-right: 2.5rem;
+  border-radius: 50px;
+  border: 2px solid #e0e0e0;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  background-color: white;
+  color: black;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #e93b52;
+  box-shadow: 0 0 0 3px rgba(233, 59, 82, 0.2);
+}
+
+.searchIcon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 100%;
+}
+
+.labTests {
+  background-color: #e93b52;
+  color: white;
+}
+
+.labTests:hover {
+  background-color: #d62e44;
+  box-shadow: 0 4px 15px rgba(233, 59, 82, 0.4);
+}
+
+.checkups {
+  background-color: #0047ab;
+  color: white;
+}
+
+.checkups:hover {
+  background-color: #003d91;
+  box-shadow: 0 4px 15px rgba(0, 71, 171, 0.4);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 2rem;
+}
+
+.image {
+  border-radius: 20px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: white;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.badgeHighlight {
+  color: #e93b52;
+  font-weight: 800;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.featureIcon {
+  width: 2rem;
+  height: 2rem;
+  color: #e93b52;
+  flex-shrink: 0;
+}
+
+.featureTitle {
+  font-weight: 700;
+  color: #0047ab;
+  font-size: 1rem;
+}
+
+.featureSubtitle {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.floatingBalls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+
+.ball {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.ball1 {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, rgba(233, 59, 82, 0.3) 0%, rgba(233, 59, 82, 0.1) 100%);
+  top: 5%;
+  left: 5%;
+}
+
+.ball2 {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, rgba(0, 71, 171, 0.3) 0%, rgba(0, 71, 171, 0.1) 100%);
+  bottom: 5%;
+  right: 5%;
+}
+
+.ball3 {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 100%);
+  top: 40%;
+  right: 10%;
+}
+
+@media (min-width: 640px) {
+  .hero {
+    padding: 3rem 2rem;
+  }
+
+  .card {
+    padding: 2.5rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 3rem;
+  }
+
+  .buttonContainer {
+    flex-direction: row;
+  }
+
+  .button {
+    width: auto;
+  }
+
+  .imageContainer {
+    max-width: 400px;
+  }
+
+  .ball1 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .ball2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .ball3 {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 3rem;
+  }
+
+  .card {
+    padding: 3rem;
+  }
+
+  .content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .textContent {
+    width: 50%;
+    padding-right: 2rem;
+  }
+
+  .imageContainer {
+    width: 50%;
+    margin-top: 0;
+  }
+
+  .features {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 5rem 4rem;
+  }
+
+  .card {
+    padding: 4rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 3.5rem;
+  }
+
+  .searchInput {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    padding-right: 3rem;
+  }
+
+  .searchIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  .imageContainer {
+    max-width: 500px;
+  }
+
+  .badge {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .featureIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .featureTitle {
+    font-size: 1.1rem;
+  }
+
+  .featureSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .ball1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .ball2 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .ball3 {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero {
+    padding: 6rem 4rem;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .subtitle {
+    font-size: 4rem;
+  }
+}

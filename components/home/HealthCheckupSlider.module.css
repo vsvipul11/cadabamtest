@@ -1,0 +1,280 @@
+.sliderSection {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+}
+
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.checkupCard {
+  flex: 1;
+}
+
+.card {
+  background: linear-gradient(135deg, #0047ab, #4169e1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 71, 171, 0.2);
+}
+
+.cardHeader {
+  margin-bottom: 1rem;
+}
+
+.checkupLabel {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.cardHeader h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.discountedPrice {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.discount {
+  background-color: #e93b52;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.cardBody {
+  margin-bottom: 1rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.cardFooter {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.viewDetailsBtn, .addToCartBtn {
+  flex: 1;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.viewDetailsBtn {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.addToCartBtn {
+  background-color: #e93b52;
+  color: white;
+}
+
+.description {
+  flex: 1;
+}
+
+.description h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.description p {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.trustedBy {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  font-size: 1rem;
+}
+
+.trustIcon {
+  color: #0047ab;
+  font-size: 1.2rem;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer img {
+  border-radius: 12px;
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  color: #0047ab;
+  transition: all 0.3s ease;
+}
+
+.navButton:hover {
+  background-color: #0047ab;
+  color: white;
+}
+
+.prevButton {
+  left: -20px;
+}
+
+.nextButton {
+  right: -20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: all 0.3s ease;
+}
+
+.activeDot {
+  background-color: #0047ab;
+  transform: scale(1.2);
+}
+
+@media (max-width: 1024px) {
+  .sliderContainer {
+    flex-direction: column;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .imageContainer {
+    order: -1;
+    margin-bottom: 2rem;
+  }
+
+  .navButton {
+    top: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sliderSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .description h2 {
+    font-size: 2rem;
+  }
+
+  .description p {
+    font-size: 1rem;
+  }
+
+  .imageContainer img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .sliderSection {
+    padding: 2rem 1rem;
+  }
+
+  .description h2 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .cardHeader h3 {
+    font-size: 1.1rem;
+  }
+
+  .discountedPrice {
+    font-size: 1.4rem;
+  }
+
+  .navButton {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+}
